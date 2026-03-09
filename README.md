@@ -2,6 +2,8 @@
 
 [![Full Test](https://img.shields.io/badge/Full%20131cl-92%25-orange)](https://github.com/dawmro/fruit_classification) [![Subset](https://img.shields.io/badge/24cl-100%25-brightgreen)](https://github.com/dawmro/fruit_classification)
 
+Fruit classification system built with Transfer Learning using VGG16 pre-trained on ImageNet.
+
 **92.0% accuracy** on **full Fruits-360** (137 classes, 23,940 test images). 
 
 ![Full Confusion Matrix](cm_full.png)
