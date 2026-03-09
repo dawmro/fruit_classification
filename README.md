@@ -15,9 +15,9 @@ Fruit classification system built with Transfer Learning using VGG16 pre-trained
 | **v2.0 Full** | **137** | **98.9%** | **92%** | [Full →](fruit_classification_full_dataset.ipynb) |
 | v1.0 Subset       | 24      | 99.2%  | **100%** |  [Subset →](fruit_classification.ipynb) |
 
-- **Custom Head**: (512→256→131 classes)
+- **Custom Head**: (512→256→137 classes)
 - **VGG16 Transfer Learning**: Frozen → Fine-tune top-8 layers
-- **Two-Phase Training**: Head (92.7%) → Full (99.2% train)
+- **Two-Phase Training**: Head (79.1%) → Full (98.9% train)
 - **Augmentation**: Rotation, zoom, flips for robust generalization
 - **Professional Pipeline**: Auto-download, Confusion matrix, Top-k accuracy, prediction grids
 
