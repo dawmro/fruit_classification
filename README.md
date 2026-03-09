@@ -53,7 +53,7 @@ Test Paradox: 90.5% >> val 22.7% → Val split noise/imbalance
 ## 📁 Structure
 ```
 fruit-classification/
-├── fruit_classification_full_dataset.ipynb  # 131 classes (90.1%)
+├── fruit_classification_full_dataset.ipynb  # 131 classes (90.5%)
 ├── fruit_classification.ipynb     # 24 classes (100%)
 ├── requirements.txt              # Dependencies
 ├── fruits-360-original-size/     # Dataset (downloaded via notebook)
@@ -99,8 +99,9 @@ Lightweight: 57MB model size
 
 
 ## 🔬 Technical Details
+
 Dataset: Fruits-360 full (131 classes)
-​
+
 Preprocessing: VGG16-specific + augmentation (rotation=20°, zoom=0.2)
 
 Optimizer: Adam (1e-3 → 1e-5 fine-tune)
