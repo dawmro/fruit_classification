@@ -59,7 +59,7 @@ pip install -r requirements.txt
 ```
 5. Run notebook
 ```sh
-# Full 137 classes (90.5%)
+# Full 137 classes (92%)
 jupyter notebook fruit_classification_full_dataset.ipynb
 ```
 
