@@ -111,7 +111,7 @@ Callbacks: EarlyStopping(patience=5), ReduceLROnPlateau(patience=3)
 Hardware: Trained on consumer CPU
 
 ## 🏆 Limitations & Future Work
-Reduce augumentation for phase 1
+Reduce augmentation for phase 1
 
 Input Size: 128×128 → Upgrade to 224×224 (+3-5% expected)
 
