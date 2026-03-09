@@ -68,12 +68,25 @@ fruit-classification/
 
 
 ## 🛠 Quick Start
-
+1. Create new virtual env:
+``` sh
+py -3.12 -m venv env
+```
+2. Activate your virtual env:
+``` sh
+env/Scripts/activate
+```
+3. Clone repo
 ``` sh
 git clone https://github.com/dawmro/fruit_classification.git
 cd fruit_classification
+```
+4. Install requirements
+```sh
 pip install -r requirements.txt
-
+```
+5. Run notebook
+```sh
 # Full 131 classes (90.5%)
 jupyter notebook fruit_classification_full_dataset.ipynb
 
@@ -82,7 +95,7 @@ jupyter notebook fruit_classification.ipynb
 
 ```
 
-##🔮 Model Architecture
+## 🔮 Model Architecture
 ```
 VGG16 (14.7M frozen → 1.7M tuned) 
 → GlobalAvgPool → Dense(512+BN+Drop0.5) 
