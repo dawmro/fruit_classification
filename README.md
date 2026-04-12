@@ -4,7 +4,7 @@
 
 Fruit classification system built with Transfer Learning using VGG16 pre-trained on ImageNet.
 
-**92.0% accuracy** on **full Fruits-360** (137 classes, 23,940 test images). 
+**93.0% accuracy** on **full Fruits-360** (141 classes, 24,810 test images). 
 
 ![Full Confusion Matrix](cm_full.png)
 
@@ -12,12 +12,12 @@ Fruit classification system built with Transfer Learning using VGG16 pre-trained
 
 | Version     | Classes | Train  | **Test** | Notebook |
 |-------------|---------|--------|----------|--------------|
-| **v2.0 Full** | **137** | **98.9%** | **92%** | [Full →](fruit_classification_full_dataset.ipynb) |
+| **v2.0 Full** | **141** | **98.8%** | **93%** | [Full →](fruit_classification_full_dataset.ipynb) |
 | v1.0 Subset       | 24      | 99.2%  | **100%** |  [Subset →](fruit_classification.ipynb) |
 
-- **Custom Head**: (512→256→137 classes)
+- **Custom Head**: (512→256→141 classes)
 - **VGG16 Transfer Learning**: Frozen → Fine-tune top-8 layers
-- **Two-Phase Training**: Head (79.1%) → Full (98.9% train)
+- **Two-Phase Training**: Head (82.8%) → Full (98.8% train)
 - **Augmentation**: Rotation, zoom, flips for robust generalization
 - **Professional Pipeline**: Auto-download, Confusion matrix, Top-k accuracy, prediction grids
 
@@ -25,16 +25,16 @@ Fruit classification system built with Transfer Learning using VGG16 pre-trained
 ## 📁 Structure
 ```
 fruit-classification/
-├── fruit_classification_full_dataset.ipynb  # 131 classes (90.5%)
+├── fruit_classification_full_dataset.ipynb  # 141 classes (93.0%)
 ├── fruit_classification.ipynb     # 24 classes (100%)
 ├── requirements.txt              # Dependencies
 ├── fruits-360-original-size/     # Dataset (downloaded via notebook)
 |   └── fruits-360-original-size/
-│       ├── Training/   # 48k imgs, 131 classes
+│       ├── Training/   # 48k imgs, 141 classes
 │       ├── Validation/ # 24k imgs 
 │       └── Test/       # 24k imgs
 ├── cm.png                       # Confusion matrix for 24 classes
-└── cm_full.png      # Full dataset Confusion matrix
+└── cm_full.png      # Full dataset Confusion matrix for 141 classes
 ```
 
 
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 ```
 5. Run notebook
 ```sh
-# Full 137 classes (92%)
+# Full 141 classes (93%)
 jupyter notebook fruit_classification_full_dataset.ipynb
 ```
 
@@ -67,7 +67,7 @@ jupyter notebook fruit_classification_full_dataset.ipynb
 ```
 VGG16 (14.7M frozen → 1.7M tuned) 
 → GlobalAvgPool → Dense(512+BN+Drop0.5) 
-→ Dense(256+BN+Drop0.3) → Dense(131, softmax)
+→ Dense(256+BN+Drop0.3) → Dense(141, softmax)
 Total: 15.1M params (57MB)
 ```
 
@@ -81,7 +81,7 @@ Lightweight: 57MB model size
 
 ## 🔬 Technical Details
 
-Dataset: Fruits-360 full (137 classes)
+Dataset: Fruits-360 full (141 classes)
 
 Preprocessing: VGG16-specific + augmentation (rotation=20°, zoom=0.2)
 
@@ -106,6 +106,6 @@ Input Size: 128×128 → Upgrade to 224×224 (+3-5% expected)
   title = {Fruits-360 dataset},
   year = {2017-},
   howpublished = {\url{https://github.com/fruits-360/fruits-360-original-size}},
-  note = {Accessed: 2026-03-08}
+  note = {Accessed: 2026-04-12}
 }
 ```
